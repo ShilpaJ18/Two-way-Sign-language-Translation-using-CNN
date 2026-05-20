@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SQL PROGRAMS</h1>
+    <p>
+        mysql>  CREATE TABLE DEPARTMENT(DNO VARCHAR(10) PRIMARY KEY,DNAME VARCHAR(10),MGRSTART_DATE DATE,MGRSSN VARCHAR(20));
+Query OK, 0 rows affected (0.03 sec)<br>
+
+mysql> CREATE TABLE EMPLOYEE(SSN VARCHAR(20) PRIMARY KEY,FNAME VARCHAR(10),LNAME VARCHAR(10),ADDRESS VARCHAR(10),SEX CHAR(1),SALARY INT(10),SUPERSSN VARCHAR(10),DNO VARCHAR(10),FOREIGN KEY(DNO)REFERENCES DEPARTMENT(DNO),FOREIGN KEY(SUPERSSN) REFERENCES EMPLOYEE(SSN));
+Query OK, 0 rows affected, 1 warning (0.04 sec)
+Query OK, 0 rows affected, 1 warning (0.04 sec)<br>
+
+mysql> ALTER TABLE DEPARTMENT ADD FOREIGN KEY(MGRSSN) REFERENCES EMPLOYEE(SSN);
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0<br>
+
+mysql> CREATE TABLE DLOCATION(DLOC VARCHAR(20),DNO VARCHAR(10),PRIMARY KEY(DNO,DLOC),FOREIGN KEY(DNO) REFERENCES DEPARTMENT(DNO));
+Query OK, 0 rows affected (0.04 sec)<br>
+
+mysql> CREATE TABLE PROJECT(PNO INT(10) PRIMARY KEY,PNAME VARCHAR(20),PLOCATION VARCHAR(20),DNO VARCHAR(20),FOREIGN KEY(DNO) REFERENCES DEPARTMENT(DNO));
+Query OK, 0 rows affected, 1 warning (0.04 sec)<br>
+
+mysql> CREATE TABLE WORKS_ON(HOURS INT(4),SSN VARCHAR(20),PNO INT(10),PRIMARY KEY(SSN,PNO),FOREIGN KEY(SSN)REFERENCES EMPLOYEE(SSN),FOREIGN KEY(PNO)REFERENCES PROJECT(PNO));
+Query OK, 0 rows affected, 2 warnings (0.04 sec)<br>
+
+mysql> INSERT INTO EMPLOYEE VALUES('1VA21CD02','PRIYA','SCOTT','BANGLORE','M',650000,NULL,NULL);<br>
+Query OK, 1 row affected (0.01 sec)
+<br>
+mysql> INSERT INTO EMPLOYEE VALUES('1VA21CD01','JOHN','SCOTT','BANGLORE','M',650000,NULL,NULL);<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO EMPLOYEE VALUES('1VA21CD03','AMULYA','SCOTT','BANGLORE','F',690000,NULL,NULL);<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO EMPLOYEE VALUES('1VA21CD04','BINDU','SCOTT','BANGLORE','F',8800000,NULL,NULL);<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql>  INSERT INTO EMPLOYEE VALUES('1VA21CD05','ARUN','SCOTT','BANGLORE','M',8800000,NULL,NULL);<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO DEPARTMENT VALUES(1,'ACCOUNTS','2001-01-01','1VA21CD01');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql>  INSERT INTO DEPARTMENT VALUES(2,'RESEARCH','2015-01-01','1VA21CD01');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO DEPARTMENT VALUES(3,'CSE','2018-02-02','1VA21CD01');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO DEPARTMENT VALUES(4,'DS','2017-06-02','1VA21CD01');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO DEPARTMENT VALUES(5,'CS','2017-05-08','1VA21CD02');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql>  UPDATE EMPLOYEE SET SUPERSSN='1VA21CD02' AND DNO='5' WHERE SSN='1VA21CD01';<br>
+ERROR 1292 (22007): Truncated incorrect DOUBLE value: '1VA21CD02'<br>
+mysql>  UPDATE EMPLOYEE SET SUPERSSN='1VA21CD05' AND DNO='5' WHERE SSN='1VA21CD01';<br>
+ERROR 1292 (22007): Truncated incorrect DOUBLE value: '1VA21CD05'<br>
+mysql>  UPDATE EMPLOYEE SET SUPERSSN='1VA21CD05', DNO='5' WHERE SSN='1VA21CD01';<br>
+Query OK, 1 row affected (0.01 sec)<br>
+Rows matched: 1  Changed: 1  Warnings: 0<br>
+
+mysql>  UPDATE EMPLOYEE SET SUPERSSN='1VA21CD02', DNO='5' WHERE SSN='1VA21CD03';<br>
+Query OK, 1 row affected (0.01 sec)<br>
+Rows matched: 1  Changed: 1  Warnings: 0<br>
+
+mysql>  UPDATE EMPLOYEE SET SUPERSSN='1VA21CD02', DNO='5' WHERE SSN='1VA21CD04';<br>
+Query OK, 1 row affected (0.01 sec)<br>
+Rows matched: 1  Changed: 1  Warnings: 0<br>
+
+mysql>  UPDATE EMPLOYEE SET SUPERSSN='1VA21CD02', DNO='5' WHERE SSN='1VA21CD05';<br>
+Query OK, 1 row affected (0.01 sec)<br>
+Rows matched: 1  Changed: 1  Warnings: 0<br>
+
+mysql>  UPDATE EMPLOYEE SET SUPERSSN='1VA21CD05', DNO='5' WHERE SSN='1VA21CD01';<br>
+Query OK, 0 rows affected (0.00 sec)<br>
+Rows matched: 1  Changed: 0  Warnings: 0<br>
+
+mysql> INSERT INTO DLOCATION VALUES('BANGLORE','1');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO DLOCATION VALUES('MANGLORE','1');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO DLOCATION VALUES('MANGLORE','2');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO DLOCATION VALUES('BANGLORE','2');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO DLOCATION VALUES('BANGLORE','3');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO DLOCATION VALUES('MANGLORE','3');<br>
+Query OK, 1 row affected (0.00 sec)<br>
+
+mysql> INSERT INTO DLOCATION VALUES('UDUPI','3');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO DLOCATION VALUES('UDUPI','1');<br>
+Query OK, 1 row affected (0.01 sec)
+<br>
+mysql> INSERT INTO DLOCATION VALUES('BANG','1');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO DLOCATION VALUES('BANG','4');<br>
+Query OK, 1 row affected (0.01 sec)
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO DLOCATION VALUES('MANGLORE','4');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO DLOCATION VALUES('BANGLORE','4');<br>
+Query OK, 1 row affected (0.00 sec)<br>
+
+mysql> INSERT INTO DLOCATION VALUES('BANGLORE','5');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO DLOCATION VALUES('MANGLORE','5');<br>
+Query OK, 1 row affected (0.01 sec)
+<br>
+mysql> INSERT INTO PROJECT VALUES(100,'IOT','BANGLORE','5');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO PROJECT VALUES(101,'CLOUD','MANGLORE','5');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO PROJECT VALUES(102,'SENSORS','MANGLORE','5');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO PROJECT VALUES(103,'ACTUATORS','BANGLORE','5');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO PROJECT VALUES(104,'BANK','BANGLORE','5');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO PROJECT VALUES(105,'CSE','BANGLORE','5');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO WORKS_ON VALUES(1,'1VA21CD01','101');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO WORKS_ON VALUES(2,'1VA21CD01','101');<br>
+ERROR 1062 (23000): Duplicate entry '1VA21CD01-101' for key 'works_on.PRIMARY'
+mysql> INSERT INTO WORKS_ON VALUES(2,'1VA21CD01','102');<br>
+Query OK, 1 row affected (0.01 sec)
+<br>
+mysql> INSERT INTO WORKS_ON VALUES(7,'1VA21CD04','101');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+<br>
+mysql> INSERT INTO WORKS_ON VALUES(7,'1VA21CD05','101');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO WORKS_ON VALUES(7,'1VA21CD01','101');<br>
+ERROR 1062 (23000): Duplicate entry '1VA21CD01-101' for key 'works_on.PRIMARY'
+mysql> INSERT INTO WORKS_ON VALUES(7,'1VA21CD02','101');<br>
+Query OK, 1 row affected (0.01 sec)
+<br>
+mysql> INSERT INTO WORKS_ON VALUES(7,'1VA21CD03','103');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO WORKS_ON VALUES(7,'1VA21CD04','103');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+mysql> INSERT INTO WORKS_ON VALUES(7,'1VA21CD02','103');<br>
+Query OK, 1 row affected (0.01 sec)<br>
+
+
+mysql> SELECT E.FNAME,E.LNAME,1.1*SALARY AS INCR_SAL FROM EMPLOYEE E,PROJECT P,WORKS_ON W WHERE E.SSN=W.SSN AND W.PNO=P.PNO AND P.PNAME='CSE';<br>
++-------+-------+----------+
+| FNAME | LNAME | INCR_SAL |
++-------+-------+----------+
+| JOHN  | SCOTT | 715000.0 |
++-------+-------+----------+
+1 row in set (0.00 sec)<br>
+
+mysql> SELECT E.FNAME,E.LNAME,1.1*SALARY AS INCR_SAL FROM EMPLOYEE E,PROJECT P,WORKS_ON W WHERE E.SSN=W.SSN AND W.PNO=P.PNO AND P.PNAME='RESEARCH';
+Empty set (0.00 sec)<br>
+
+mysql>
+mysql> SELECT SUM(E.SALARY),MAX(E.SALARY),MIN(E.SALARY),AVG(E.SALARY) FROM EMPLOYEE E,DEPARTMENT D WHERE E.DNO=D.DNO AND DNAME='ACCOUNTS';<br>
++---------------+---------------+---------------+---------------+
+| SUM(E.SALARY) | MAX(E.SALARY) | MIN(E.SALARY) | AVG(E.SALARY) |
++---------------+---------------+---------------+---------------+
+|          NULL |          NULL |          NULL |          NULL |
++---------------+---------------+---------------+---------------+

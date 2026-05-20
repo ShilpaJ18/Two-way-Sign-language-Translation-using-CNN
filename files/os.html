@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OS NOTES</h1>
+    <p>Operating System (OS) - VTU Notes
+        1. Introduction to Operating System
+        An Operating System (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs. It acts as an intermediary between users and the computer hardware.
+        
+        Functions of OS:
+        
+        Process Management: Manages processes in the system.<br>
+        Memory Management: Allocates and deallocates memory.<br>
+        File System Management: Organizes and stores files.<br>
+        Device Management: Controls input and output devices.<br>
+        Security and Access Control: Provides user authentication and file access control.<br>
+        User Interface: Provides interface for users (CLI or GUI).<br>
+        2. Types of Operating Systems<br>
+        Batch OS: Jobs are grouped together and processed without user interaction.<br>
+        Time-Sharing OS: Allows multiple users to use the system concurrently (e.g., UNIX).<br>
+        Real-Time OS: Provides immediate processing for critical applications (e.g., embedded systems).<br>
+        Multiprocessing OS: Uses multiple processors to execute multiple tasks simultaneously.
+        Distributed OS: Manages a group of independent computers to appear as a single system to the user.
+        3. Process Management
+        A process is a program in execution. It is the basic unit of execution in an operating system.
+        
+        Process States:
+        
+        New: Process is being created.
+        Ready: Process is waiting to be assigned to a processor.
+        Running: Process is currently being executed.
+        Waiting: Process is waiting for an event (e.g., I/O operation).
+        Terminated: Process has finished execution.
+        Process Control Block (PCB): A data structure that stores information about a process, such as process state, program counter, CPU registers, etc.
+        
+        Process Scheduling: The OS selects which process gets to use the CPU using scheduling algorithms like:
+        
+        FCFS (First Come, First Served)
+        SJF (Shortest Job First)
+        Round Robin
+        Priority Scheduling
+        4. Memory Management
+        Memory management ensures that each process has sufficient memory to execute and that memory is used efficiently. <br><br>
+        
+        Memory Allocation: Assigning memory blocks to processes. <br><br>
+        
+        Contiguous Allocation: Each process is assigned a single contiguous block of memory. <br><br>
+        Paged Memory Allocation: Memory is divided into fixed-size blocks called pages. <br><br>
+        Segmented Memory Allocation: Memory is divided into variable-sized segments. <br><br>
+        Virtual Memory: Allows the execution of processes that may not be completely in memory by using disk space as an extension of RAM (e.g., paging and segmentation). <br><br>
+        
+        Page Replacement Algorithms: <br><br>
+        
+        FIFO (First In, First Out) <br><br>
+        LRU (Least Recently Used) <br><br>
+        Optimal Page Replacement <br><br>
+        5. File System Management <br><br>
+        The file system manages files and directories in the system. It provides a way to store, retrieve, and organize files.
+        <br><br>
+        File Attributes: Name, size, type, location, access control information.
+        <br><br>
+        File Operations:
+        
+        Create, Delete, Open, Close <br><br>
+        Read, Write, Append <br><br>
+        Directory Structure: Organizes files into directories.
+        <br><br>
+        Single-Level Directory: All files in one directory. <br><br>
+        Two-Level Directory: Separate directories for each user. <br><br>
+        Tree-Structured Directory: Hierarchical directory structure. <br><br>
+        Access Control: Ensures that only authorized users can access files. <br><br>
+        <br><br>
+        6. I/O Management <br><br>
+        I/O Management controls communication between the system and external devices (e.g., keyboard, monitor <br><br>, printers).
+        <br><br>
+        I/O Devices: May be character-oriented or block-oriented. <br><br>
+        Device Drivers: Software that allows the OS to communicate with hardware devices. <br><br>
+        Buffering: Used to store data temporarily while being transferred between devices and memory. <br><br>
+        7. Deadlock <br><br>
+        A deadlock occurs when two or more processes are blocked forever, waiting for each other to release resources. <br><br>
+        
+        Conditions for Deadlock: <br><br>
+        
+        Mutual Exclusion: At least one resource is held in a non-shareable mode. <br><br>
+        Hold and Wait: A process holds one resource and waits for others. <br><br>
+        No Preemption: Resources cannot be forcibly taken from a process. <br><br>
+        Circular Wait: A set of processes are waiting for each other in a circular chain. <br><br>
+        Deadlock Prevention: Ensures that at least one of the deadlock conditions is eliminated. <br><br>
+        
+        Deadlock Avoidance: The system uses resource allocation strategies to avoid deadlocks. <br><br>
+        
+        Deadlock Detection and Recovery: Detects deadlock and takes corrective action (e.g., process termination). <br><br>
+        
+        8. Multithreading <br><br>
+        Multithreading allows multiple threads (smaller units of a process) to execute concurrently within a single process.
+        
+        Thread: A lightweight process that shares the same address space. <br><br>
+        
+        Benefits: <br><br>
+        
+        Improved CPU utilization. <br><br>
+        Responsiveness in interactive applications. <br><br>
+
+        Types of Threads:
+        
+        User Threads: Managed by the application.
+        Kernel Threads: Managed by the OS. <br><br>
+
+        9. Synchronization
+        Synchronization ensures that multiple processes or threads can execute concurrently without conflicting over shared resources.
+        
+        Critical Section Problem: The problem of ensuring that only one process/thread is executing in its critical section at a time.
+        
+        Semaphores: A synchronization primitive used to control access to shared resources. <br><br>
+        
+        Binary Semaphore: Takes values 0 or 1. <br><br>
+        Counting Semaphore: Can take any non-negative integer value. <br><br>
+        Mutex: A type of binary semaphore used for mutual exclusion. <br><br>
+        <br><br>
+<a href="subj.html" target="_blank">
+    Click for back to homepage
+</a>
+        
+        </p>
+</body>
+</html>

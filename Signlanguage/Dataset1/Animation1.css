@@ -1,0 +1,31 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background: linear-gradient(60deg,black,purple,black);
+}
+.container{
+    height:600px;
+    width:450px;
+    margin:30px auto;
+    border-radius: 20px;
+    box-shadow:5px 5px 15px black;
+    overflow:hidden
+
+}
+
+.container img{
+    height: inherit;
+    width:inherit;
+    border-radius:25px;
+    filter:grayscale(100%);
+    transition: all 1s;
+
+}
+
+.container img:hover{
+    filter:grayscale(0%);
+    transform: scale(1.5,1.5);
+}

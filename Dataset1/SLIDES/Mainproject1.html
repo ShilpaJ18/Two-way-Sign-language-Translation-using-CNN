@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HealthCare+ Hospital</title>
+  <link rel="stylesheet" href="mainproject.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">HealthCare+</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#facilities">Facilities</a></li>
+      <li><a href="#register">Register</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+
+
+  <!-- Slideshow -->
+  <div id="img-slider" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#img-slider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#img-slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#img-slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+  
+    <!-- Carousel Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="data:image/jpeg;base64,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" class="d-block w-100" alt="Healthcare">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>HEALTH CARE</h1>
+          <p>“Within every life we touch, we ignite hope, deliver healing, and embody the unwavering spirit of compassionate care.”</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8xc06JZBUrJ0390pCxiVsycXw3mWgfbHJ0jFNAmQo1tK5qZpepFeKf-PD-AbqbUUDZmw&usqp=CAU" class="d-block w-100" alt="Medicine">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 style="color: brown;">MEDICINE</h1>
+          <p style="color: black;">"Medicine is not just a science—it is the art of restoring hope, the courage to heal, and the power to change lives."</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSbl3neAQKR0mjp-q4LPlGFBc6asx3xvcKe-CaTCRSQfxhW-r0jZkXMeWgv85ejS_hl1I&usqp=CAU" class="d-block w-100" alt="Patient Support">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 style="color:black"> PATIENT SUPPORT</h1>
+          <p style="color: rgb(108, 52, 13);font-size: medium;">"Your strength is greater than any struggle—every day is a step closer to healing."</p>
+        </div>
+      </div>
+    </div>
+  
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#img-slider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#img-slider" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  
+  <!-- About Section -->
+  <section id="about" class="about" style="background-color: lightcoral;">
+    <h2><marquee>Welcome to HealthCare+ Hospital</marquee></h2>
+    <p>
+      HealthCare+ is a modern, multi-specialty hospital committed to excellence in healthcare. With cutting-edge technology, experienced staff, and compassionate care, we strive to provide the best medical support to our patients.
+    </p>
+    <img src="https://thumbs.dreamstime.com/b/hospital-building-modern-parking-lot-59693686.jpg" alt="Hospital Front" class="about-img">
+  </section>
+  <hr style="color: rgb(119, 119, 233);">
+
+  <!-- Facilities -->
+  <section id="facilities" class="facilities">
+    <h2>Our Facilities</h2>
+    <div class="facility">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQORE-BJQ5ZcwBlrgiWTqrfk6g8LAFGVvbDKQ&s" alt="ICU">
+      <h3>24/7 ICU</h3>
+      <p>Intensive care with expert supervision and equipment.</p>
+    </div>
+    <div class="facility">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWU1u3Pak8osCuSxPAfKvYutm68WI7ZOaCTA&s" alt="Lab">
+      <h3>Laboratory</h3>
+      <p>Accurate diagnostics with modern lab tools.</p>
+    </div>
+    <div class="facility">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7zAhvje8K4Xd1pR46BOlt3slGt9kRT-HJHQ&s" alt="Pharmacy">
+      <h3>Pharmacy</h3>
+      <p>Fully stocked with essential medicines.</p>
+    </div>
+    <div class="facility">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbCe3NaX072cHS-1cvi3JnjdfyxxydJ0Uyhw&s" alt="Ambulance">
+      <h3>Ambulance</h3>
+      <p>Quick-response emergency services 24/7.</p>
+    </div>
+  </section>
+  <div class = "container">
+    <marquee>
+
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbjtTaixxVxA4NaqdUbJo4-a5kNYX8I2jyYA&s" alt="image not available" height="350px" width="400px">
+    <img src="https://s-media-cache-ak0.pinimg.com/736x/0e/c7/35/0ec735db8cd5970b6c1f1d88ae07d2c8--kids-hospital-hospital-design.jpg" alt="image not available" height="350px" width="400px">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1a5ZO5r5aXt17uzftCQYpI6VhGYv5pA7EGHG9d1j1AaPJCVA0IYBV1C4L3TB9SNqBzIo&usqp=CAU" alt="image not available" height="350px" width="400px">
+</marquee>
+
+</marquee>
+
+</marquee>
+    <div class="text">
+        <h2>HOSPITAL DESCRIPTION</h2>
+        <p>Manipal Hospital is one of India’s leading healthcare institutions known for advanced medical care and patient-centric services.
+            It offers specialized treatment across departments like cardiology, oncology, neurology, orthopedics, and more.
+            The hospital is equipped with state-of-the-art technology and a team of experienced doctors and surgeons.
+            It emphasizes preventive healthcare and personalized treatment plans.
+            With branches across the country, Manipal Hospital is trusted for its quality, safety, and compassionate care
+
+
+        </p>
+    </div>
+
+</div>
+
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">Hospital Information</h2>
+
+  <!-- Accordion Wrapper -->
+  <div class="accordion" id="hospitalAccordion">
+
+    <!-- About Hospital -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#aboutHospital" aria-expanded="true" aria-controls="aboutHospital">
+          About Hospital
+        </button>
+      </h2>
+      <div id="aboutHospital" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#hospitalAccordion">
+        <div class="accordion-body">
+          Our hospital offers top-tier healthcare services with modern infrastructure and highly trained staff.
+        </div>
+      </div>
+    </div>
+
+    <!-- Doctors Availability -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#doctorsAvailability" aria-expanded="false" aria-controls="doctorsAvailability">
+          Doctors Availability
+        </button>
+      </h2>
+      <div id="doctorsAvailability" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#hospitalAccordion">
+        <div class="accordion-body">
+          Doctors are available from 9:00 AM to 8:00 PM, Monday through Saturday. 24/7 emergency service is also available.
+        </div>
+      </div>
+    </div>
+
+    <!-- Hospital Facilities -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hospitalFacilities" aria-expanded="false" aria-controls="hospitalFacilities">
+          Hospital Facilities
+        </button>
+      </h2>
+      <div id="hospitalFacilities" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#hospitalAccordion">
+        <div class="accordion-body">
+          ICU, emergency care, diagnostic labs, pharmacy, advanced operation theaters, and specialty clinics are available.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+  
+
+  <!-- Registration Form -->
+   <div style="background: linear-gradient(45deg,pink, rgb(178, 178, 230),rgb(147, 186, 229));">
+
+    <h2>Patient Registration Form</h2>
+    <form id="registrationForm" class="form">
+      <label for="name" style="color: chocolate;">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="age" style="color: chocolate;">Age:</label>
+      <input type="number" id="age" name="age" min="0" required />
+
+      <label for="gender" style="color: chocolate;">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="department" style="color: chocolate;">Department:</label>
+      <select id="department" name="department">
+        <option value="Cardiology">Cardiology</option>
+        <option value="Orthopedics">Orthopedics</option>
+        <option value="Pediatrics">Pediatrics</option>
+        <option value="Neurology">Neurology</option>
+      </select>
+
+      <label for="date" style="color: chocolate;">Preferred Date:</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="email" style="color: chocolate;">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <button type="submit" style="color: chocolate;">Submit</button><br>
+    </form>
+  
+</div><br><br>
+  <!--  Navbar for Famous Doctors -->
+<aside class="navbar">
+    <h3>Famous Doctors</h3>
+    <ul>
+      <li><a href="#">Dr.Veena (neurologist)</a></li>
+      <li><a href="#">Dr. Shilpa Janardhan - Cardiac Surgeon</a></li>
+      <li><a href="#">Dr. Naresh Trehan - Cardiologist</a></li>
+      <li><a href="#">Dr. Balamurali Ambati - Ophthalmologist</a></li>
+      <li><a href="#">Dr. Prathap C Reddy - Founder, Apollo</a></li>
+      <li><a href="#">Dr. Farida Khanam - Professor & Healer</a></li>
+      <li><a href="#">Dr. Lal PathLabs - Diagnostics Pioneer</a></li>
+    </ul>
+  </aside>
+  <label for="department" style="color: brown;">Department:</label>
+<select id="department" name="department">
+  <optgroup label="General Medicine">
+    <option value="General Physician">General Physician</option>
+    <option value="Internal Medicine">Internal Medicine</option>
+    <option value="Emergency Medicine">Emergency Medicine</option>
+  </optgroup>
+  <optgroup label="Surgical Specialties">
+    <option value="General Surgery">General Surgery</option>
+    <option value="Orthopedics">Orthopedics</option>
+    <option value="ENT (Ear, Nose, Throat)">ENT (Ear, Nose, Throat)</option>
+    <option value="Ophthalmology">Eye Specialist (Ophthalmology)</option>
+    <option value="Dentistry">Dentistry</option>
+    <option value="Plastic Surgery">Plastic Surgery</option>
+  </optgroup>
+  <optgroup label="Internal Specialties">
+    <option value="Cardiology">Cardiology</option>
+    <option value="Neurology">Neurology</option>
+    <option value="Nephrology">Nephrology</option>
+    <option value="Pulmonology">Pulmonology</option>
+    <option value="Gastroenterology">Gastroenterology</option>
+    <option value="Endocrinology">Endocrinology</option>
+  </optgroup>
+  <optgroup label="Others">
+    <option value="Pediatrics">Pediatrics</option>
+    <option value="Dermatology">Dermatology</option>
+    <option value="Psychiatry">Psychiatry</option>
+    <option value="Oncology">Oncology</option>
+    <option value="Urology">Urology</option>
+  </optgroup>
+</select>
+
+
+
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>📞 +123 456 789 | ✉️ info@healthcareplus.com</p>
+    <p>&copy; 2025 HealthCare+ Hospital. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlides() {
+      slides.forEach((slide) => slide.style.display = "none");
+      slideIndex++;
+      if (slideIndex > slides.length) slideIndex = 1;
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+
+    showSlides();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

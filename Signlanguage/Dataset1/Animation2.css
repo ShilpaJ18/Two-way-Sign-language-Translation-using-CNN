@@ -1,0 +1,50 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+
+}
+body{
+    background:linear-gradient(40deg,lightblue,pink,rgb(236, 180, 236))
+}
+
+.container{
+    height:550px;
+    width:350px;
+    margin:30px auto;
+    border-radius:30px;
+    box-shadow:5px 5px 15px black;
+    overflow:hidden
+}
+
+.container img{
+    height:inherit;
+    width: inherit;
+    transition: all 1s;
+    border-radius: 30px;
+}
+
+.container  .text {
+    position:absolute;
+    top:0px;
+    left:0px;
+    color:rgb(223, 223, 123);
+    font-family: cursive;
+    width:50%;
+    height: 100%;
+    padding:10px;
+    font-weight:35px;
+    background-color: rgba(7,3,3,0.3);
+    transform:perspective(400px) rotateY(90deg);
+    transition: all 1s;
+    transform-origin: left;
+
+}
+
+.container:hover .text{
+    transform: perspective(400px) rotateY(0deg);
+}
+
+.container img:hover{
+    transform: scale(1.5,1.5);
+}

@@ -1,0 +1,60 @@
+.body{
+    margin-bottom: 2px;
+}
+.reg6{
+    height:640px;
+    width:450px;
+    margin:20px auto;
+    box-shadow:10px 20px 20px rgb(59, 58, 58);
+    background: linear-gradient(45deg,rgb(177, 196, 91),rgb(225, 89, 141),rgb(99, 120, 196));
+    border-radius: 20px 0px 20px 0px;
+    text-align: center;
+}
+
+h1{
+    
+    letter-spacing:2px;
+    color:rgb(247, 244, 239);
+    margin:30px;
+    border-style: double;
+    border-color: rgb(101, 32, 90);
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 10px 10px 20px rgb(19, 7, 31);
+    
+    
+}
+.label{
+    height:30px;
+    width:270px;
+    margin:10px ;
+    letter-spacing: 2px;
+    border-radius: 8px 18px 8px 18px;
+    border-left: 10px solid rgb(26, 22, 21);
+    text-align: center;
+
+}
+.h2{
+    
+    letter-spacing:2px;
+    color:rgb(216, 8, 60);
+    margin:30px;
+    padding:20px;
+    border-bottom: 10px;
+    border-style: double;
+    border-color: rgb(154, 76, 170);
+    text-align: center;
+    
+    
+}
+.reg6 input{
+    height:30px;
+    width:270px;
+    margin:10px ;
+    letter-spacing: 2px;
+    border-radius: 8px 18px 8px 18px;
+    border-left: 10px solid rgb(39, 39, 188);
+    text-align: center;
+    
+    
+}

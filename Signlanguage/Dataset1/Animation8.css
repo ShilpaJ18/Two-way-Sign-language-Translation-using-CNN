@@ -1,0 +1,166 @@
+*margin{
+    margin: 0px;
+    padding :0px;
+    box-sizing:border-box;
+}
+.container1{
+    width:100%;
+    height:100vh;
+    background-color: white;
+    display:flex;
+    align-items:flex-start;
+    justify-content: space-evenly;
+    
+}
+.sky{
+    width:100%;
+    height:100vh;
+    background-color: white;
+    display:flex;
+    align-items:flex-start;
+    justify-content: space-evenly;
+    
+    
+}
+    
+
+.Image-1{
+    animation-name: sun-forward;
+    
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-radius: 50%
+}
+.Image-2{
+    animation-name: cloud1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+.Image-3{
+    animation-name: cloud2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+.Image-4{
+    animation-name: tree-move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+@keyframes tree-move{
+    from{
+        transform:rotate(5deg);
+
+    }
+    to{
+        transform:rotate(-5deg);
+    }
+    
+}
+
+
+@keyframes sun-forward{
+    from{
+        transform:rotate(0deg);
+
+    }
+    to{
+        transform:rotate(360deg);
+    }
+    
+}
+
+@keyframes cloud1 {
+    0%{
+        transform: scale(1,1);
+    }
+    10%{
+        transform: scale(0.8,0.8);
+    }
+    20%{
+        transform: scale(0.6);
+    }
+    30%{
+        transform: scale(0.4,0.4);
+    }
+    40%{
+        transform: scale(0.2,0.2);
+    }
+    50%{
+        transform: scale(0.4,0.4);
+    }
+    60%{
+        transform: scale(0.6,0.6);
+    }
+    70%{
+        transform: scale(0.8,0.8);
+    }
+    80%{
+        transform: scale(1,1);
+    }
+    90%{
+        transform: scale(1.2,1.2);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+   
+
+    
+}
+@keyframes cloud2 {
+    0%{
+        transform: scale(1,1);
+    }
+    10%{
+        transform: scale(0.8,0.8);
+    }
+    20%{
+        transform: scale(0.6);
+    }
+    30%{
+        transform: scale(0.4,0.4);
+    }
+    40%{
+        transform: scale(0.2,0.2);
+    }
+    50%{
+        transform: scale(0.4,0.4);
+    }
+    60%{
+        transform: scale(0.6,0.6);
+    }
+    70%{
+        transform: scale(0.8,0.8);
+    }
+    80%{
+        transform: scale(1,1);
+    }
+    90%{
+        transform: scale(1.2,1.2);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+.bird {
+    position: absolute;
+    top: 20%;
+    left: -60px;
+    width: 40px;
+    height: 40px;
+    transition: transform 10s ease;
+}
+
+/* Hover effect to simulate a bird flying */
+.container1:hover .bird {
+    transform: translateX(90vw);
+}

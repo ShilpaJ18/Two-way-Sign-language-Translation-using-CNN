@@ -1,0 +1,92 @@
+*margin{
+    margin: 0px;
+    padding :0px;
+    box-sizing:border-box;
+}
+.container{
+    width:100%;
+    height:100vh;
+    background-color: lightcoral;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Image-1{
+    animation-name: pooja-forward;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+.Image-2{
+    animation-name: rash-reverse;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+.Image-3{
+    animation-name: tiger;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+@keyframes pooja-forward{
+    from{
+        transform:rotate(0deg);
+
+    }
+    to{
+        transform:rotate(360deg);
+    }
+    
+}
+@keyframes rash-reverse{
+    0%{
+        transform:rotate(360deg);
+
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+    
+}
+@keyframes tiger {
+    0%{
+        transform: scale(1,1);
+    }
+    10%{
+        transform: scale(0.8,0.8);
+    }
+    20%{
+        transform: scale(0.6);
+    }
+    30%{
+        transform: scale(0.4,0.4);
+    }
+    40%{
+        transform: scale(0.2,0.2);
+    }
+    50%{
+        transform: scale(0.4,0.4);
+    }
+    60%{
+        transform: scale(0.6,0.6);
+    }
+    70%{
+        transform: scale(0.8,0.8);
+    }
+    80%{
+        transform: scale(1,1);
+    }
+    90%{
+        transform: scale(1.2,1.2);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+   
+    
+}

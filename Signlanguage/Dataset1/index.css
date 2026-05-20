@@ -1,0 +1,95 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+header{
+    background-image:url('https://png.pngtree.com/background/20211215/original/pngtree-blurred-light-red-and-purple-background-picture-image_1457903.jpg');
+    background-size: cover;
+    background-position: center;
+    height:150px;
+    width:100%;
+    box-shadow:0px 0px 15px blue;
+    margin-bottom:10px;
+
+}
+header marquee{
+    font-size:80px;
+    color:white;
+    padding:20px;
+    text-shadow:5px 5px 10px black;
+    font-weight:bolder;
+}
+.menu{
+    height:50px;
+    background: linear-gradient(60deg,rgb(234, 134, 134),rgb(183, 137, 183),rgb(138, 189, 221),rgb(110, 160, 156),rgb(161, 216, 156),rgb(205, 169, 102));
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:space-evenly;
+    box-shadow: 0px 0px 15px teal;
+    position: sticky;
+    top:0px;
+    left:0px;
+}
+
+.menu a{
+    color:rgb(24, 21, 21);
+    text-decoration: none;
+    font-size: 20px;
+    flex:auto;
+    padding: 10px;
+}
+.menu a:hover{
+    background-color: lightsalmon;
+    color:green;
+    font-size: 30px;
+    font-weight: bold;
+}
+.image{
+    height:300px;
+    background-image: url(com.jpg);
+    background-position: center;
+    margin-top:center;
+    background-size: cover;
+    
+
+}
+
+.image .text{
+    background-color: rgba(0,0,0,0.5);
+   
+    width:100%;
+    height:100%;
+    text-align:center;
+    color:rgb(219, 169, 17);
+}
+
+.image-text h1{
+    font-size:60px;
+    margin:10px;
+    padding:10px;
+}
+.image-text p{
+    line-height: 35px;
+    font-size: 20px;
+    padding:10px;
+    text-align: left;
+}
+.parent{
+    background-color:lightblue;
+
+}
+.parent h1{
+    color:white;
+    font-size: 50px;;
+    
+}
+.parent p{
+    color:blue;
+    font-size:35px;
+    line-height:35px;
+    text-indent:50px;
+    margin:10px;
+}

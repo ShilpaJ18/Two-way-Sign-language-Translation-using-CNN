@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>COMPUTER SCIENCE</h1>
+    <p>
+        . What is Object-Oriented Programming (OOP)? Explain its features.
+Answer: Object-Oriented Programming (OOP) is a programming paradigm that is based on the concept of objects, which are instances of classes. It uses the following features:
+
+Encapsulation: The concept of bundling data and the methods that operate on the data within one unit, i.e., a class.
+Inheritance: The mechanism by which one class can inherit properties and methods from another class.
+Polymorphism: The ability of one function or operator to operate in different ways based on the objects it is working with.
+Abstraction: Hiding the internal details of an object and exposing only the necessary parts to the outside world.
+2. Explain the concept of "Array" with an example.
+Answer: An array is a collection of elements of the same data type stored in contiguous memory locations. It allows accessing elements using an index. The size of an array is fixed once it is created.
+
+Example:
+
+python
+Copy
+# Python example of an array
+arr = [10, 20, 30, 40, 50]  # An array of 5 integers
+print(arr[2])  # Output: 30 (third element of the array)
+3. What are the differences between while loop and for loop?
+Answer:
+
+while loop: It is a control structure that repeats a block of code as long as a specified condition is true. It is useful when the number of iterations is unknown.
+
+Syntax:
+
+python
+Copy
+while condition:
+    # code block
+for loop: It is used for iterating over a sequence (like a list, tuple, string, or range). It is used when the number of iterations is known beforehand.
+
+Syntax:
+
+python
+Copy
+for item in iterable:
+    # code block
+Differences:
+
+The for loop is generally used when the number of iterations is known, whereas the while loop is used when the number of iterations depends on a condition being true.
+4. Write a program in Python to find the largest of three numbers.
+Answer:
+
+python
+Copy
+def find_largest(a, b, c):
+    if a >= b and a >= c:
+        return a
+    elif b >= a and b >= c:
+        return b
+    else:
+        return c
+
+# Example usage
+print(find_largest(10, 20, 15))  # Output: 20
+5. What is a linked list? Explain its types.
+Answer: A linked list is a linear data structure where each element (node) points to the next. Each node contains two parts: data and a reference (or link) to the next node.
+
+Singly Linked List: Each node points to the next node. The last node points to None.
+Doubly Linked List: Each node points to both the next node and the previous node.
+Circular Linked List: The last node points back to the first node.
+6. What is a database? Explain the types of databases.
+Answer: A database is an organized collection of structured information, or data, typically stored electronically in a computer system. The database management system (DBMS) manages the database.
+
+Types of Databases:
+
+Relational Database: Stores data in tables with rows and columns. Example: MySQL, Oracle.
+NoSQL Database: Designed for unstructured data and scalability. Example: MongoDB, Cassandra.
+Object-Oriented Database: Data is represented as objects, as in object-oriented programming. Example: db4o.
+Distributed Database: A database that is distributed across multiple physical locations. Example: Google Bigtable.
+7. Explain the difference between primary key and foreign key in a relational database.
+Answer:
+
+Primary Key: A primary key is a field in a table that uniquely identifies each row in that table. It cannot have NULL values.
+Foreign Key: A foreign key is a field in one table that refers to the primary key of another table. It creates a relationship between the two tables.
+8. What is an algorithm? Explain the characteristics of a good algorithm.
+Answer: An algorithm is a step-by-step procedure or formula for solving a problem.
+
+Characteristics of a good algorithm:
+
+Finiteness: It should terminate after a finite number of steps.
+Definiteness: Each step should be precisely defined.
+Input: It should accept zero or more inputs.
+Output: It should produce at least one output.
+Effectiveness: The steps must be basic enough to be carried out, in principle, by a person using only pen and paper.
+9. What is recursion? Write a program to find the factorial of a number using recursion.
+Answer: Recursion is a process in which a function calls itself directly or indirectly to solve a problem.
+
+Factorial Program Using Recursion:
+
+python
+Copy
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+# Example usage
+print(factorial(5))  # Output: 120
+10. Explain the concept of "inheritance" in OOP with an example.
+Answer: Inheritance in OOP is a mechanism by which one class can inherit the properties and methods of another class, allowing code reuse and the creation of more specific classes based on general ones.
+
+Example:
+
+python
+Copy
+class Animal:
+    def speak(self):
+        print("Animal makes a sound")
+
+class Dog(Animal):  # Dog inherits from Animal
+    def speak(self):
+        print("Dog barks")
+
+# Example usage
+animal = Animal()
+animal.speak()  # Output: Animal makes a sound
+
+dog = Dog()
+dog.speak()  # Output: Dog barks
+These questions cover fundamental concepts in programming and computer science that are generally part of the 12th-grade curriculum. Let me know if you need further details on any topic!
+<br><br>
+<a href="subj.html" target="_blank">
+    Click for back to homepage
+</a>
+
+
+
+</p>
+</body>
+</html>

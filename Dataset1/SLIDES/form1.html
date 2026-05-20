@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: aqua;">
+    <h1>registration form</h1>
+    <label for="#fn" >first name</label><br>
+    <input type ="text" id="fn" maxlength="20 " autofocus><br>
+    <label for="#ln" >last name</label><br>
+    <input type="text" id="fn" maxlength="10" ><br>
+    <label for="#password" >enter password</label><br>
+    <input type="text" id="password" maxlength="10" minlength="5" placeholder="enter password"><br>
+    <input type="number" placeholder="enter age" min="18" max="100"><br>
+    <label for="#amount" >enter amount to be withdrawn</label><br>
+    <input type ="number" id="amount" min="100" max="20000" ><br>
+    <input type ="text" placeholder="enter pan number" required><br>
+    <input type="email" placeholder="enter email"><br>
+    <label for="#documents">upload Document</label><br>
+    <input type="file" id="documents" multiple><br>
+    <label for="#roi">rate of interset</label><br>
+    <input type="text" id="roi" value="21%" disabled><br><br>
+    <!-----------creating radio buttons-->
+    <label>select your gender</label>
+    <input type="radio" id="f" name="gender" value="female">
+    <label for="#f">female</label>
+    <label for="#m">male</label>
+    <input type="radio" id="m" value="male" name="gender">
+    <label for="#o">others</label>
+    <input type="radio" id="o" value="others" name="gender"><br><br>
+    <!------------creating checkbox-->
+    <label>languages known</label>
+    <label for="kan">kannada</label>
+    <input type="checkbox" id="kan" value="kannada">
+    <label for="tam">tamil</label>
+    <input type="checkbox" id="tam" value="tamil">
+    <label for="hin">hindi</label>
+    <input type="checkbox" id="hin" value="hindi"><br><br>
+
+    <label for="#dob">date of birth</label><br>
+    <input type="date" id="dob" ><br><br>
+    <label for="#time">time</label><br>
+    <input type="time" id="time"><br><br>
+    <label for="#week">select week</label><br>
+    <input type="week" id="week"><br><br>
+     <label for="#mon">select month</label><br>
+    <input type="month" id="mon"><br><br>
+    <input type="submit" value="register">
+
+
+
+
+ </body>
+</html>

@@ -1,0 +1,44 @@
+body{
+    margin-bottom: 2px;
+}
+.reg8{
+    height:640px;
+    width:450px;
+    margin:20px auto;
+    box-shadow:10px 20px 20px rgb(21, 20, 20);
+    background: radial-gradient(45deg,violet,rgb(115, 62, 152),rgb(133, 133, 188),rgb(137, 209, 137),yellow,rgb(220, 188, 129),rgb(224, 142, 142));
+    border-radius: 30px 0px 30px 0px;
+    text-align: center;
+}
+
+h1{
+    
+    letter-spacing:2px;
+    color:rgb(16, 15, 14);
+    margin:30px;
+    border-style: double;
+    border-color: rgb(206, 99, 110);
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 10px 10px 20px rgb(20, 15, 24);
+    
+    
+    
+}
+
+
+    
+
+.reg8 input{
+    height:30px;
+    width:270px;
+    margin:10px ;
+    letter-spacing: 2px;
+    border-radius: 8px 18px 8px 18px;
+    border-left: 10px solid rgb(166, 183, 142);
+    text-align: center;
+    background-color: rgb(168, 242, 242);
+    border-left: 10px blueviolet; 
+    
+    
+}

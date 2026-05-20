@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Water Tracker Registration</title>
+  <link rel="stylesheet" href="water.css" />
+</head>
+<body>
+    <!-- Water Benefits Section -->
+
+  
+  <div class="container">
+    <!-- Registration Section -->
+    <section id="registrationSection">
+      <h1>📝 Register</h1>
+      <input type="text" id="name" placeholder="Enter your name" />
+      <input type="number" id="weight" placeholder="Enter weight (kg)" />
+      <input type="number" id="height" placeholder="Enter height (cm)" />
+      <button onclick="registerUser()">Submit</button>
+      <p id="recommendation"></p>
+    </section>
+
+    <!-- Main Tracker Section (hidden initially) -->
+    <section id="trackerSection" style="display:none;">
+      <h1>💧 Welcome, <span id="userName"></span>!</h1>
+
+      <!-- Daily Goal Setting -->
+      <section class="goal-section">
+        <h2>🎯 Your Daily Goal (ml)</h2>
+        <input type="number" id="goalInput" placeholder="Enter goal in ml" />
+        <button onclick="setGoal()">Set Goal</button>
+        <p>Recommended: <span id="recommendedGoal"></span> ml</p>
+      </section>
+
+      <!-- Log Intake -->
+      <section class="log-section">
+        <h2>🚰 Log Water Intake</h2>
+        <select id="cupSize">
+          <option value="200">Small Cup (200ml)</option>
+          <option value="300">Medium Cup (300ml)</option>
+          <option value="500">Large Bottle (500ml)</option>
+        </select>
+        <button onclick="logWater()">Log Intake</button>
+      </section>
+
+      <!-- Progress -->
+      <section class="progress-section">
+        <h2>📊 Daily Progress</h2>
+        <div class="progress-bar">
+          <div class="progress" id="progressFill">0%</div>
+        </div>
+      </section>
+
+      <!-- History -->
+      <section class="history-section">
+        <h2>🕘 Intake History</h2>
+        <ul id="historyList"></ul>
+      </section>
+    </section>
+  </div>
+
+  <script>
+    let user = {};
+    let goal = 0;
+    let totalIntake = 0;
+
+    function registerUser() {
+      const name = document.getElementById('name').value;
+      const weight = parseFloat(document.getElementById('weight').value);
+      const height = parseFloat(document.getElementById('height').value);
+
+      if (!name || isNaN(weight) || isNaN(height)) {
+        alert("Please fill in all fields correctly.");
+        return;
+      }
+
+      // Water intake recommendation: 35ml per kg of body weight
+      const intakeMl = Math.round(weight * 35); // e.g., 70kg x 35ml = 2450ml
+
+      user = { name, weight, height, intakeMl };
+
+      document.getElementById('recommendation').textContent =
+        `Recommended daily intake: ${(intakeMl / 1000).toFixed(2)} L`;
+
+      // Show tracker
+      document.getElementById('registrationSection').style.display = 'none';
+      document.getElementById('trackerSection').style.display = 'block';
+
+      document.getElementById('userName').textContent = name;
+      document.getElementById('goalInput').value = intakeMl;
+      document.getElementById('recommendedGoal').textContent = intakeMl;
+
+      goal = intakeMl;
+      updateProgress();
+    }
+
+    function setGoal() {
+      const newGoal = parseInt(document.getElementById("goalInput").value);
+      if (!isNaN(newGoal) && newGoal > 0) {
+        goal = newGoal;
+        updateProgress();
+      }
+    }
+
+    function logWater() {
+      const amount = parseInt(document.getElementById("cupSize").value);
+      totalIntake += amount;
+      updateProgress();
+      const li = document.createElement("li");
+      li.textContent = `${amount} ml at ${new Date().toLocaleTimeString()}`;
+      document.getElementById("historyList").appendChild(li);
+    }
+
+    function updateProgress() {
+      const percent = Math.min((totalIntake / goal) * 100, 100);
+      const fill = document.getElementById("progressFill");
+      fill.style.width = percent + "%";
+      fill.textContent = Math.round(percent) + "%";
+    }
+  </script>
+  <section class="benefits-section">
+    <h2>💦 Why Drink Water?</h2>
+    <div class="benefit-list">
+      <div class="benefit-item">
+        🧠 <strong>Boosts Brain Power:</strong> Improves focus and mental clarity.
+      </div>
+      <div class="benefit-item">
+        🔥 <strong>Supports Metabolism:</strong> Aids digestion and calorie burning.
+      </div>
+      <div class="benefit-item">
+        💪 <strong>Enhances Physical Performance:</strong> Keeps muscles hydrated during workouts.
+      </div>
+      <div class="benefit-item">
+        💧 <strong>Prevents Dehydration:</strong> Regulates body temperature and energy.
+      </div>
+      <div class="benefit-item">
+        🧼 <strong>Flushes Toxins:</strong> Helps kidneys remove waste efficiently.
+      </div>
+      <div class="benefit-item">
+        ✨ <strong>Glowing Skin:</strong> Keeps skin hydrated, reducing dryness and wrinkles.
+      </div>
+      <div class="benefit-item">
+        ❤️ <strong>Supports Heart Health:</strong> Maintains blood volume and pressure.
+      </div>
+    </div>
+  </section><br><br>
+</body>
+</html>

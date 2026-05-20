@@ -1,0 +1,51 @@
+body{
+    margin-bottom: 1000px;
+
+}
+h1{
+    
+    letter-spacing:5px;
+    color:white;
+    margin:30px;
+    padding:20px;
+    border-bottom: 10px;
+    border-style: double;
+    border-color: red;
+    text-align: center;
+    border-radius: 15px 5px 15px 5px;
+    
+    
+}
+.reg{
+    height:790px;
+    width:350px;
+    margin:20px auto;
+    box-shadow:0px 0px 30px rgb(59, 58, 58);
+    background: linear-gradient(45deg, yellow,rgb(188, 90, 90),rgb(119, 119, 204));
+    border-radius: 15px 5px 15px 5px;
+   
+    
+
+}
+.reg input{
+    height:30px;
+    width:270px;
+    margin:10px ;
+    border-radius: 0px 18px 0px 18px;
+    border-left: 10px solid blueviolet;
+    text-align: center;
+    border-radius: 15px 5px 15px 5px;
+}
+h2{
+    
+    letter-spacing:5px;
+    color:white;
+    margin:30px;
+    padding:20px;
+    border-bottom: 10px;
+    border-style: double;
+    border-color: red;
+    text-align: center;
+    border-radius: 15px 5px 15px 5px;
+    
+}

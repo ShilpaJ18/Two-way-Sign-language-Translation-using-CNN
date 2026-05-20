@@ -1,0 +1,92 @@
+*margin{
+    margin: 0px;
+    padding :0px;
+    box-sizing:border-box;
+}
+
+
+.Image-1{
+    animation-name: leaf-forward;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px; 
+    
+
+}
+.Image-2{
+    animation-name: leaf-reverse;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-radius: 50%;
+    top: -50px; 
+    
+}
+.Image-3 {
+    animation-name: leaf-forward;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-radius: 50%;
+    top: -50px; 
+    
+}
+@keyframes leaf-forward{
+    from{
+        transform:rotate(0deg);
+
+    }
+    to{
+        transform:rotate(360deg);
+    }
+    
+}
+@keyframes leaf-reverse{
+    0%{
+        transform:rotate(360deg);
+
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+    
+}
+@keyframes leaf-forward{
+    from{
+        transform:rotate(0deg);
+
+    }
+    to{
+        transform:rotate(360deg);
+    }
+    
+}
+
+
+
+
+
+.Image-4{
+    animation-name: leaf-forward;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+.Image-5{
+    animation-name: leaf-reverse;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+.Image-6{
+    animation-name: leaf-forward;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}

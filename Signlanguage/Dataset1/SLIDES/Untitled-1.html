@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Screen Time Tracker</title>
+  <link rel="stylesheet" href="Untitled-1.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📱 Screen Time Dashboard</h1>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="section" id="dashboard">
+      <h2>Today's Summary</h2>
+      <div class="summary-cards">
+        <div class="card">
+          <h3>Total Time</h3>
+          <p>4h 35m</p>
+        </div>
+        <div class="card">
+          <h3>Most Used App</h3>
+          <p>YouTube – 1h 10m</p>
+        </div>
+        <div class="card">
+          <h3>Unlocks</h3>
+          <p>26 times</p>
+        </div>
+      </div>
+    </section><br><br>
+
+    <!-- Graph/Chart Section -->
+    <section class="section" id="charts">
+      <h2></h2>
+      <div class="chart-placeholder"><!-- Weekly Usage with Chart -->
+        <section class="section" id="charts">
+          <h2>📊 Weekly Usage</h2>
+          <canvas id="weeklyChart" width="600" height="250"></canvas>
+        </section>
+        
+        <!-- Include Chart.js CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+          const ctx = document.getElementById('weeklyChart').getContext('2d');
+          const weeklyChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+              datasets: [{
+                label: 'Screen Time (hrs)',
+                data: [3.5, 4.2, 5.1, 3.9, 4.6, 6.0, 2.8],
+                backgroundColor: 'rgba(255, 99, 132, 0.7)',
+                borderRadius: 8,
+                borderSkipped: false
+              }]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  callbacks: {
+                    label: ctx => `${ctx.raw} hrs`
+                  }
+                }
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  grid: {
+                    color: 'rgba(255,255,255,0.1)'
+                  },
+                  ticks: {
+                    color: '#fff'
+                  }
+                },
+                x: {
+                  grid: {
+                    display: false
+                  },
+                  ticks: {
+                    color: '#fff'
+                  }
+                }
+              }
+            }
+          });
+        </script>
+        </div>
+
+    </section><br><br>
+
+    <!-- Goal Setting Section -->
+    <section class="section">
+      <h2>🎯 Set Time Goals</h2>
+      <input type="text" placeholder="App Name (e.g., Instagram)" />
+      <input type="number" placeholder="Daily Limit (minutes)" />
+      <button class="btn-primary">Save Goal</button>
+    </section>
+
+    <!-- Notification Settings -->
+    <section class="section">
+      <h2>🔔 Notifications</h2>
+      <label>
+        <input type="checkbox" checked />
+        Notify when close to daily limit
+      </label><br/>
+      <label>
+        <input type="checkbox" />
+        Notify when app limit is exceeded
+      </label>
+    </section>
+
+    <!-- Focus Mode -->
+    <section class="section focus-mode">
+      <h2>🧘 Focus Mode</h2>
+      <p>Temporarily block distracting apps.</p>
+      <button class="btn-focus">Enable Focus Mode</button>
+    </section>
+
+    <!-- History and Reporting -->
+    <section class="section">
+      <h2>📅 Usage History</h2>
+      <ul class="history-list">
+        <li><strong>June 15:</strong> 5h 12m</li>
+        <li><strong>June 14:</strong> 4h 45m</li>
+        <li><strong>June 13:</strong> 3h 59m</li>
+      </ul>
+    </section>
+
+    <!-- Customization -->
+    <section class="section">
+      <h2>⚙️ Customize</h2>
+      <label>
+        Appearance:
+        <select>
+          <option>Light</option>
+          <option>Dark</option>
+        </select>
+      </label>
+    </section>
+  </div>
+</body>
+</html>

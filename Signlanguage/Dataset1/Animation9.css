@@ -1,0 +1,92 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(lightcoral,purple,rgb(168, 168, 213));
+    background-position: center;
+}
+.container{
+    height:350px;
+    width:350px;
+    box-shadow:5px 5px 15px white;
+    position:relative;
+    background-size: cover;
+    background-position: center;
+    animation-name: moving-images;
+    animation-duration:20s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+}
+@keyframes moving-images {
+    0%{
+        top:0px;
+        left:0px;
+        background-image: url('p1.avif');
+    }
+    10%{
+        top:0px;
+        left:200px;
+        background-image: url('p2.jpg');
+    }
+    20%{
+        top:0px;
+        left:300px;
+        background-image: url('https://static.vecteezy.com/system/resources/previews/033/161/652/non_2x/ai-generated-cute-little-girl-holding-a-bouquet-of-flowers-in-mothers-day-international-womens-day-st-valentines-day-concept-copy-space-photo.jpg');
+    }
+
+
+
+
+
+    30%{
+        top:0px;
+        left:400px;
+        background-image: url('p4.avif');
+    }
+    40%{
+        top:0px;
+        left:500px;
+        background-image: url('https://i.pinimg.com/736x/a2/4a/7e/a24a7e582e79e65202aec7e84007fe12.jpg');
+    }
+
+
+    50%{
+        top:0px;
+        left:600px;
+        background-image: url('pp5.jpg');
+    }
+
+    60%{
+        top:0px;
+        left:700px;
+        background-image: url('pp6.jpg');
+    }
+
+    70%{
+        top:0px;
+        left:800px;
+        background-image: url('ppp7.jpg');
+    }
+
+    80%{
+        top:0px;
+        left:900px;
+        background-image: url('pp8.jpg');
+    }
+
+    90%{
+        top:0px;
+        left:1000px;
+        background-image: url('pp9.avif');
+    }
+
+    100%{
+        top:0px;
+        left:1100px;
+        background-image: url('p10.avif');
+    }
+
+    
+}
