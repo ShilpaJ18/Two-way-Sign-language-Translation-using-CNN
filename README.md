@@ -1,4 +1,4 @@
-# Sign Language Recognition System
+# Two Way Sign Language Translation Using CNN
 
 ## Overview
 The Sign Language Recognition System is an AI-based project developed using Python, OpenCV, and Deep Learning techniques to recognize hand gestures and convert them into meaningful text output. The system helps improve communication for people with hearing and speech impairments through real-time gesture detection and interpretation.
